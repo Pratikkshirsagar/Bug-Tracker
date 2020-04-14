@@ -1,13 +1,11 @@
 import { BUG_ADDED, BUG_REMOVED } from './actionTypes';
-const INITIAL_STATE = [];
 
-export default function reducer(state = INITIAL_STATE, action) {
-  if (action === BUG_ADDED) {
-    console.log('1');
+export default function reducer(state = [], action) {
+  if (action.type === BUG_ADDED) {
     return [
       ...state,
       {
-        id: lastId++,
+        id: 1,
         description: action.payload.description,
         resolve: false,
       },
