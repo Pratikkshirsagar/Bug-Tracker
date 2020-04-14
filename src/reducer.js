@@ -1,7 +1,8 @@
+import { BUG_ADDED, BUG_REMOVED } from './actionTypes';
 const INITIAL_STATE = [];
 
 export default function reducer(state = INITIAL_STATE, action) {
-  if (action === 'bugAdded') {
+  if (action === BUG_ADDED) {
     console.log('1');
     return [
       ...state,
@@ -11,7 +12,7 @@ export default function reducer(state = INITIAL_STATE, action) {
         resolve: false,
       },
     ];
-  } else if (action.type === 'bugRemoved') {
+  } else if (action.type === BUG_REMOVED) {
     return state.filter((bug) => bug.id !== action.payload.id);
   }
 
