@@ -1,6 +1,6 @@
 const INITIAL_STATE = [];
 
-function reducer(state = INITIAL_STATE, action) {
+export default function reducer(state = INITIAL_STATE, action) {
   if (action === 'bugAdded')
     return [
       ...state,
